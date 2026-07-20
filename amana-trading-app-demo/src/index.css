@@ -1,0 +1,80 @@
+/* --- Global Scale Adjustments --- */
+:root {
+  font-size: 11px !important; /* Scaled down base font size */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #0b1120;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px 0;
+  overflow-x: hidden;
+}
+
+/* --- Fixed Mobile Container Frame --- */
+#root {
+  width: 350px !important;
+  height: 680px !important;
+  max-width: 350px !important;
+  margin: 0 auto;
+  background-color: #faf6ec;
+  position: relative;
+  border-radius: 36px;
+  border: 10px solid #1e293b;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 2px rgba(255, 255, 255, 0.1);
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+/* Simulated Camera Punch-Hole */
+#root::before {
+  content: "";
+  position: sticky;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  z-index: 9999;
+  display: block;
+  margin-bottom: -10px;
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Scale down font sizes across Tailwind components */
+h1, .text-xl, .text-2xl {
+  font-size: 1.05rem !important;
+  line-height: 1.25 !important;
+}
+
+p, span, button, input {
+  font-size: 0.75rem !important;
+}
+
+/* Reduce card image square heights */
+.aspect-square {
+  aspect-ratio: 5 / 4 !important; /* Compact rectangle card view */
+}
