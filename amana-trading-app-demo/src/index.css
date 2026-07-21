@@ -1,6 +1,6 @@
-/*/* --- Global Scale Adjustments --- 
+/* --- Global Scale Adjustments ---*/ 
 :root {
-  font-size: 11px !important; /* Scaled down base font size 
+  font-size: 11px !important; /* Scaled down base font size */
 }
 
 * {
@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Fixed Mobile Container Frame --- 
+/* --- Fixed Mobile Container Frame --- */
 #root {
   width: 350px !important;
   height: 680px !important;
@@ -41,7 +41,7 @@ body {
   display: none;
 }
 
-/* Simulated Camera Punch-Hole 
+/* Simulated Camera Punch-Hole */
 #root::before {
   content: "";
   position: sticky;
@@ -64,7 +64,7 @@ img {
   object-fit: cover;
 }
 
-/*Scale down font sizes across Tailwind components
+/*Scale down font sizes across Tailwind components*/
 h1, .text-xl, .text-2xl {
   font-size: 1.05rem !important;
   line-height: 1.25 !important;
@@ -74,7 +74,7 @@ p, span, button, input {
   font-size: 0.75rem !important;
 }
 
-/* Reduce card image square heights 
+/* Reduce card image square heights */
 .aspect-square {
-  aspect-ratio: 5 / 4 !important; /* Compact rectangle card view 
-} */
+  aspect-ratio: 5 / 4 !important; /* Compact rectangle card view */
+} 
